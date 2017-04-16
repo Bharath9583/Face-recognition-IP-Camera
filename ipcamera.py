@@ -25,7 +25,6 @@ while True:
                 count = count+1
             cv2.putText(i,str(count),(x,y+h), font, 1,(255,255,255),2)
         cv2.imshow('frame',i)
-        cv2.waitKey(1)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             exit(0)
         
