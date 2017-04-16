@@ -23,7 +23,9 @@ while True:
             for (x,y,w,h) in faces:
                 cv2.rectangle(i,(x,y),(x+w,y+h),(255,0,0),2)
                 count = count+1
-            cv2.putText(i,str(count),(x,y+h), font, 1,(255,255,255),2)
+        cv2.putText(i,"Person Count="+str(count),(10,255), font, 1,(255,255,255),2)
+        cv2.namedWindow('frame',cv2.WINDOW_NORMAL)
+        cv2.resizeWindow("frame", 640, 480)
         cv2.imshow('frame',i)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             exit(0)
